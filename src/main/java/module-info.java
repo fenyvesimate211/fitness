@@ -3,6 +3,6 @@ module fenyvesi.fitnesz {
     requires javafx.fxml;
 
 
-    opens fenyvesi.fitnesz to javafx.fxml;
-    exports fenyvesi.fitnesz;
+    opens fenyvesi.fitness to javafx.fxml;
+    exports fenyvesi.fitness;
 }

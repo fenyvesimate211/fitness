@@ -1,4 +1,4 @@
-package fenyvesi.fitnesz;
+package fenyvesi.fitness;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,12 +7,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class FitnessApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 700, 500);
-        stage.setTitle("Fitnesz");
+        FXMLLoader fxmlLoader = new FXMLLoader(FitnessApplication.class.getResource("userProfile-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 700);
+        stage.setTitle("Fitness application");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();

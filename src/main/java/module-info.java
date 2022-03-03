@@ -1,8 +1,10 @@
-module fenyvesi.fitnesz {
+module fitness {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens fenyvesi.fitness to javafx.fxml;
-    exports fenyvesi.fitness;
+    exports controller;
+    opens controller to javafx.fxml;
+    exports application;
+    opens application to javafx.fxml;
 }

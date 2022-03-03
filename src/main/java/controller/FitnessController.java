@@ -1,6 +1,7 @@
-package fenyvesi.fitness;
+package controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 public class FitnessController {
@@ -15,7 +16,7 @@ public class FitnessController {
     private TextField genderTextFiled;
 
     @FXML
-    private TextField dateOfBirthTextFiled;
+    private DatePicker dateOfBirthDataPicker;
 
     @FXML
     private TextField weightTextFiled;
@@ -26,5 +27,15 @@ public class FitnessController {
     @FXML
     protected void onCreateProfileButtonClick() {
         //TODO check field data
+        if(validateProfile()){
+            System.out.println("Profile is valid"); //TODO make text_label
+        } else {
+            System.out.println("Profile is not valid"); //TODO make text_label
+        }
+    }
+
+    private boolean validateProfile() {
+        
+        return true;
     }
 }

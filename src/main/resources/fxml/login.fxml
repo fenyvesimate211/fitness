@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.geometry.Insets?>
-<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="controller.LoginController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
+<!-- https://www.youtube.com/watch?v=HBBtlwGpBek&ab_channel=JavaCodingCommunity-ProgrammingTutorials -->
 
-    <Label fx:id="loginText" text="Login" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-
-
-
-</GridPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="133.0" layoutY="88.0" text="Username">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="133.0" layoutY="139.0" text="Password">
+                 <font>
+                     <Font name="System Bold" size="20.0" />
+                 </font>
+             </Label>
+            <TextField fx:id="username" layoutX="258.0" layoutY="88.0" prefHeight="25.0" prefWidth="190.0" promptText="Username" />
+            <PasswordField fx:id="password" layoutX="259.0" layoutY="139.0" prefHeight="25.0" prefWidth="190.0" promptText="Password" />
+            <Button fx:id="loginButton" layoutX="302.0" layoutY="212.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="37.0" prefWidth="147.0" text="Login" />
+            <Label fx:id="wrongLogin" layoutX="185.0" layoutY="179.0" prefHeight="17.0" prefWidth="204.0" textFill="RED" />
+            <Button fx:id="registerButton" layoutX="133.0" layoutY="212.0" mnemonicParsing="false" onAction="#userRegister" prefHeight="37.0" prefWidth="147.0" text="Register" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

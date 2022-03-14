@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" alignment="CENTER" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="controller.UserProfileController">
+<GridPane alignment="CENTER" hgap="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -12,7 +12,7 @@
     <Label fx:id="userProfileText" text="User Profile" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 
     <Label fx:id="nameText" text="Name:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-    <TextField fx:id="nameTextFiled" text="Write your name here" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+    <TextField fx:id="nameTextFiled" promptText="Write your name here" GridPane.columnIndex="2" GridPane.rowIndex="1" />
 
     <Label fx:id="emailText" text="Email:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
     <TextField fx:id="emailTextFiled" GridPane.columnIndex="2" GridPane.rowIndex="2" />
@@ -21,22 +21,22 @@
     <PasswordField fx:id="passwordField" visible="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
 
     <Label fx:id="genderText" text="Gender:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-    <ChoiceBox fx:id="genderChoiseBox" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+    <ChoiceBox fx:id="genderChoiceBox" prefHeight="25.0" prefWidth="173.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
 
     <Label fx:id="dateOfBirthText" text="Date of birth:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-    <DatePicker fx:id="dateOfBirthDataPicker" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+    <DatePicker fx:id="dateOfBirthDataPicker" promptText="Select your date of birth" GridPane.columnIndex="2" GridPane.rowIndex="5" />
 
     <Label fx:id="weightText" text="Weight:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-    <TextField fx:id="weightTextFiled" text="Select your weight" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-    <ChoiceBox fx:id="weightChoiceBox" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+    <TextField fx:id="weightTextFiled" promptText="Select your weight" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+    <ChoiceBox fx:id="weightChoiceBox" prefHeight="25.0" prefWidth="85.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
 
     <Label fx:id="heightText" text="Height:" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-    <TextField fx:id="heightTextFiled" text="Select your height" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-    <ChoiceBox fx:id="heightChoiceBox" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+    <TextField fx:id="heightTextFiled" promptText="Select your height" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+    <ChoiceBox fx:id="heightChoiceBox" prefHeight="25.0" prefWidth="86.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
 
     <Label fx:id="dailyGoalText" text="Daily goal:" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-    <TextField fx:id="dailyGoalTextFiled" text="Select your daily goal" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-    <ChoiceBox fx:id="calorieChoiceBox" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+    <TextField fx:id="dailyGoalTextFiled" promptText="Write your daily goal" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+    <ChoiceBox fx:id="calorieChoiceBox" prefHeight="25.0" prefWidth="85.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
 
     <Button onAction="#createProfile" text="Create profile" GridPane.columnIndex="3" GridPane.rowIndex="9" />
     <Button onAction="#backToLogin" text="Back" GridPane.columnIndex="4" GridPane.rowIndex="9" />

@@ -10,28 +10,28 @@ import java.util.Objects;
 
 public class FitnessApplication extends Application {
 
-    @Override
-    public void start(Stage stage) throws IOException {
-        try {
+    private static Stage stg;
 
+    @Override
+    public void start(Stage primaryStage) throws IOException {
+        try {
+            stg = primaryStage;
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/login.fxml")));
             Scene scene = new Scene(root, 600, 400);
-            stage.setTitle("Fitness application");
-            stage.setScene(scene);
-            stage.setResizable(false);
-            stage.show();
+            primaryStage.setTitle("Fitness application");
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
+            primaryStage.show();
 
         } catch(Exception e) {
             e.printStackTrace();
         }
     }
-//        FXMLLoader fxmlLoader = new FXMLLoader(FitnessApplication.class.getResource("/fxml/login.fxml"));
-//        Scene scene = new Scene(fxmlLoader.load(), 900, 800);
-//        stage.setTitle("Fitness application");
-//        stage.setScene(scene);
-//        stage.setResizable(false);
-//        stage.show();
-//    }
+
+    public void changeScene(String fxml) throws IOException {
+        Parent pane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxml)));
+        stg.getScene().setRoot(pane);
+    }
 
     public static void main(String[] args) {
         launch(args);

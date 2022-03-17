@@ -73,6 +73,7 @@ public class UserController implements Initializable {
         }
     }
 
+    //TODO choiceBoxCheck
     private boolean validateProfile() {
 
         String NAME_PATTERN = "^[a-záéíóöőüűA-ZÁÉÍÓÖŐÚÜŰ ]{3,30}$";
@@ -111,15 +112,15 @@ public class UserController implements Initializable {
         }
 
         if (weight_heightMatcher.matches()) {
-            System.out.println("Date of birth is valid " + getWeightText());
+            System.out.println("Weight " + getWeightText().getText() + " is valid");
         } else {
-            System.out.println("Date of birth is invalid " + getWeightText());
+            System.out.println("Weight " + getWeightText().getText() + " is invalid");
         }
 
         if (weight_heightMatcher.matches()) {
-            System.out.println("Date of birth is valid " + getHeightText());
+            System.out.println("Height " + getHeightText().getText() + " is valid");
         } else {
-            System.out.println("Date of birth is invalid " + getHeightText());
+            System.out.println("Height " + getHeightText().getText() + " is invalid");
         }
 
         return true;
@@ -140,8 +141,13 @@ public class UserController implements Initializable {
     }
 
     public int getDateOfBirth() {
-        return Period.between(LocalDate.of(dateOfBirth.getValue().getYear(), dateOfBirth.getValue().getMonthValue(),
-                dateOfBirth.getValue().getDayOfMonth()), LocalDate.now()).getYears();
+        if (dateOfBirth.getValue() == null){
+            System.out.println("dateOfBirth can't be null");
+            return -1;
+        } else {
+            return Period.between(LocalDate.of(dateOfBirth.getValue().getYear(), dateOfBirth.getValue().getMonthValue(),
+                    dateOfBirth.getValue().getDayOfMonth()), LocalDate.now()).getYears();
+        }
     }
 
     public TextField getWeightText() {

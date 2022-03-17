@@ -22,7 +22,6 @@ public class FitnessApplication extends Application {
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
             primaryStage.show();
-
         } catch(Exception e) {
             e.printStackTrace();
         }

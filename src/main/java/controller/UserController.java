@@ -1,41 +1,48 @@
 package controller;
 
 import application.FitnessApplication;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.util.converter.LocalDateStringConverter;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
+import java.time.Year;
+import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserController implements Initializable {
 
+    public UserController() {
+
+    }
+
     FitnessApplication m = new FitnessApplication();
     @FXML
-    private PasswordField passwordField;
+    private TextField userName;
     @FXML
-    private TextField nameTextFiled;
+    private TextField email;
     @FXML
-    private TextField genderTextFiled;
+    private PasswordField password;
     @FXML
-    private DatePicker dateOfBirthDataPicker;
+    private DatePicker dateOfBirth;
     @FXML
-    private TextField weightTextFiled;
+    private TextField weightText;
     @FXML
-    private TextField heightTextFiled;
+    private TextField heightText;
     @FXML
     private ChoiceBox<String> calorieChoiceBox;
     @FXML
-    private TextField dailyGoalTextFiled;
+    private TextField dailyGoalText;
     @FXML
     private ChoiceBox<String> genderChoiceBox;
     @FXML
@@ -49,7 +56,7 @@ public class UserController implements Initializable {
     private final String[] dailyGoal = {"kcal"};
 
     @Override
-    public void initialize(URL arg0, ResourceBundle arg1){
+    public void initialize(URL url, ResourceBundle resourceBundle){
         genderChoiceBox.getItems().addAll(gender);
         weightChoiceBox.getItems().addAll(weight);
         heightChoiceBox.getItems().addAll(height);
@@ -67,37 +74,81 @@ public class UserController implements Initializable {
     }
 
     private boolean validateProfile() {
-        //TODO https://www.w3schools.blog/validate-username-regular-expression-regex-java
-        //TODO https://www.geeksforgeeks.org/how-to-validate-a-password-using-regular-expressions-in-java/
 
-        String PATTERN = "^[[A-ZÁÉÍÓÖŐÚÜŰ]?[ ][a-záéíóöőúüű ]]+[[A-ZÁÉÍÓÖŐÚÜŰ]?[ ][a-záéíóöőúüű ]]$"; //"[a-zA-Z]{3}-[\\d]{3}$";
-        List<String> values = new ArrayList<String>();
-        values.add("Sántha Máté Imre");
-        values.add("Fenyvesi Matyas");
-        values.add("Fa Ma9");
-        values.add("FaMa");
-        values.add("alma");
-        values.add("Alma é");
-        values.add(" ");
-        values.add("A");
-        values.add("jai_singh");
-        values.add("ABC-123");
-        values.add("ABCd-12");
+        String NAME_PATTERN = "^[a-záéíóöőüűA-ZÁÉÍÓÖŐÚÜŰ ]{3,30}$";
+        String EMAIL_PATTERN = "^(.+)@(.+)$";
+        String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-záéíóöőüű])(?=.*[A-ZÁÉÍÓÖŐÚÜŰ])(?=.*[!%@#&()–{}:;',?/*~$^+=<>]).{8,20}$";
+        String WEIGHT_HEIGHT_PATTERN = "^[0-9]{1,3}.[0-9]{1,3}$";
 
-        Pattern pattern = Pattern.compile(PATTERN);
-        for (String value : values){
-            Matcher matcher = pattern.matcher(value);
-            if(matcher.matches()){
-                System.out.println("Username "+ value +" is valid");
-            }else{
-                System.out.println("Username "+ value +" is invalid");
+        Matcher nameMatcher = Pattern.compile(NAME_PATTERN).matcher(getUserName().getText());
+        Matcher emailMatcher = Pattern.compile(EMAIL_PATTERN).matcher(getEmail().getText());
+        Matcher passwordMatcher = Pattern.compile(PASSWORD_PATTERN).matcher(getPassword().getText());
+        Matcher weight_heightMatcher = Pattern.compile(WEIGHT_HEIGHT_PATTERN).matcher(getWeightText().getText());
+
+        if (nameMatcher.matches()) {
+                System.out.println("Username "+ getUserName().getText() +" is valid");
+
+            } else {
+                System.out.println("Username "+ getUserName().getText() +" is invalid");
             }
+
+        if (emailMatcher.matches()) {
+            System.out.println("Email "+ getEmail().getText() +" is valid");
+        } else {
+            System.out.println("Email "+ getEmail().getText() +" is invalid");
+        }
+
+        if (passwordMatcher.matches()) {
+            System.out.println("Password "+ getPassword().getText() +" is valid");
+        } else {
+            System.out.println("Password "+ getPassword().getText() +" is invalid");
+        }
+
+        if (getDateOfBirth() > 14) {
+            System.out.println("Date of birth is valid " + getDateOfBirth());
+        } else {
+            System.out.println("Date of birth is invalid " + getDateOfBirth());
+        }
+
+        if (weight_heightMatcher.matches()) {
+            System.out.println("Date of birth is valid " + getWeightText());
+        } else {
+            System.out.println("Date of birth is invalid " + getWeightText());
+        }
+
+        if (weight_heightMatcher.matches()) {
+            System.out.println("Date of birth is valid " + getHeightText());
+        } else {
+            System.out.println("Date of birth is invalid " + getHeightText());
         }
 
         return true;
     }
 
-    public void backToLogin(ActionEvent event) throws IOException {
+    public void backToLogin() throws IOException {
         m.changeScene("/fxml/login.fxml");
+    }
+
+    public TextField getUserName() {
+        return userName;
+    }
+    public TextField getEmail() {
+        return email;
+    }
+    public PasswordField getPassword() {
+        return password;
+    }
+
+    public int getDateOfBirth() {
+        return Period.between(LocalDate.of(dateOfBirth.getValue().getYear(), dateOfBirth.getValue().getMonthValue(),
+                dateOfBirth.getValue().getDayOfMonth()), LocalDate.now()).getYears();
+    }
+
+    public TextField getWeightText() {
+        return weightText;
+    }
+
+    public TextField getHeightText() {
+        return heightText;
     }
 }

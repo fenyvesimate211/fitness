@@ -9,36 +9,37 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <Label fx:id="userProfileText" text="User Profile" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <Label text="User" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 
-    <Label fx:id="nameText" text="Name:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-    <TextField fx:id="nameTextFiled" promptText="Write your name here" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+    <Label text="Name:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <TextField fx:id="userName" promptText="Write your name here" GridPane.columnIndex="2" GridPane.rowIndex="1" />
 
-    <Label fx:id="emailText" text="Email:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-    <TextField fx:id="emailTextFiled" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <Label text="Email:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <TextField fx:id="email" promptText="Write your email here" GridPane.columnIndex="2" GridPane.rowIndex="2" />
 
-    <Label fx:id="passwordText" text="Password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-    <PasswordField fx:id="passwordField" visible="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+    <Label text="Password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <PasswordField fx:id="password" promptText="Write your password here" GridPane.columnIndex="2" GridPane.rowIndex="3" />
 
-    <Label fx:id="genderText" text="Gender:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Label text="Gender:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
     <ChoiceBox fx:id="genderChoiceBox" prefHeight="25.0" prefWidth="173.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
 
-    <Label fx:id="dateOfBirthText" text="Date of birth:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-    <DatePicker fx:id="dateOfBirthDataPicker" promptText="Select your date of birth" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+    <Label text="Date of birth:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    <DatePicker fx:id="dateOfBirth" promptText="Select your date of birth" GridPane.columnIndex="2" GridPane.rowIndex="5" />
 
-    <Label fx:id="weightText" text="Weight:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-    <TextField fx:id="weightTextFiled" promptText="Select your weight" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+    <Label text="Weight:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+    <TextField fx:id="weightText" promptText="Select your weight" GridPane.columnIndex="2" GridPane.rowIndex="6" />
     <ChoiceBox fx:id="weightChoiceBox" prefHeight="25.0" prefWidth="85.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
 
-    <Label fx:id="heightText" text="Height:" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-    <TextField fx:id="heightTextFiled" promptText="Select your height" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+    <Label text="Height:" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+    <TextField fx:id="heightText" promptText="Select your height" GridPane.columnIndex="2" GridPane.rowIndex="7" />
     <ChoiceBox fx:id="heightChoiceBox" prefHeight="25.0" prefWidth="86.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
 
-    <Label fx:id="dailyGoalText" text="Daily goal:" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-    <TextField fx:id="dailyGoalTextFiled" promptText="Write your daily goal" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+    <Label text="Daily goal:" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+    <TextField fx:id="dailyGoalText" promptText="Write your daily goal" GridPane.columnIndex="2" GridPane.rowIndex="8" />
     <ChoiceBox fx:id="calorieChoiceBox" prefHeight="25.0" prefWidth="85.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
 
     <Button onAction="#createProfile" text="Create profile" GridPane.columnIndex="3" GridPane.rowIndex="9" />
     <Button onAction="#backToLogin" text="Back" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+   <Label fx:id="nameCheck" prefHeight="17.0" prefWidth="39.0" text="label" GridPane.columnIndex="4" GridPane.rowIndex="1" />
 
 </GridPane>

@@ -7,15 +7,11 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.util.converter.LocalDateStringConverter;
 
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.Period;
-import java.time.Year;
-import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -79,19 +75,18 @@ public class UserController implements Initializable {
         String NAME_PATTERN = "^[a-záéíóöőüűA-ZÁÉÍÓÖŐÚÜŰ ]{3,30}$";
         String EMAIL_PATTERN = "^(.+)@(.+)$";
         String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-záéíóöőüű])(?=.*[A-ZÁÉÍÓÖŐÚÜŰ])(?=.*[!%@#&()–{}:;',?/*~$^+=<>]).{8,20}$";
-        String WEIGHT_HEIGHT_PATTERN = "^[0-9]{1,3}.[0-9]{1,3}$";
+        String WEIGHT_HEIGHT_DAILYGOAL_PATTERN = "^[0-9]{1,3}.[0-9]{1,3}$";
 
         Matcher nameMatcher = Pattern.compile(NAME_PATTERN).matcher(getUserName().getText());
         Matcher emailMatcher = Pattern.compile(EMAIL_PATTERN).matcher(getEmail().getText());
         Matcher passwordMatcher = Pattern.compile(PASSWORD_PATTERN).matcher(getPassword().getText());
-        Matcher weight_heightMatcher = Pattern.compile(WEIGHT_HEIGHT_PATTERN).matcher(getWeightText().getText());
+        Matcher weight_height_dailyGoalMatcher = Pattern.compile(WEIGHT_HEIGHT_DAILYGOAL_PATTERN).matcher(getWeightText().getText());
 
         if (nameMatcher.matches()) {
-                System.out.println("Username "+ getUserName().getText() +" is valid");
-
-            } else {
-                System.out.println("Username "+ getUserName().getText() +" is invalid");
-            }
+            System.out.println("Username "+ getUserName().getText() +" is valid");
+        } else {
+            System.out.println("Username "+ getUserName().getText() +" is invalid");
+        }
 
         if (emailMatcher.matches()) {
             System.out.println("Email "+ getEmail().getText() +" is valid");
@@ -111,16 +106,22 @@ public class UserController implements Initializable {
             System.out.println("Date of birth is invalid " + getDateOfBirth());
         }
 
-        if (weight_heightMatcher.matches()) {
+        if (weight_height_dailyGoalMatcher.matches()) {
             System.out.println("Weight " + getWeightText().getText() + " is valid");
         } else {
             System.out.println("Weight " + getWeightText().getText() + " is invalid");
         }
 
-        if (weight_heightMatcher.matches()) {
+        if (weight_height_dailyGoalMatcher.matches()) {
             System.out.println("Height " + getHeightText().getText() + " is valid");
         } else {
             System.out.println("Height " + getHeightText().getText() + " is invalid");
+        }
+
+        if (weight_height_dailyGoalMatcher.matches()) {
+            System.out.println("Daily Goal " + getDailyGoalText().getText() + " is valid");
+        } else {
+            System.out.println("Daily Goal " + getDailyGoalText().getText() + " is invalid");
         }
 
         return true;
@@ -142,7 +143,6 @@ public class UserController implements Initializable {
 
     public int getDateOfBirth() {
         if (dateOfBirth.getValue() == null){
-            System.out.println("dateOfBirth can't be null");
             return -1;
         } else {
             return Period.between(LocalDate.of(dateOfBirth.getValue().getYear(), dateOfBirth.getValue().getMonthValue(),
@@ -156,5 +156,9 @@ public class UserController implements Initializable {
 
     public TextField getHeightText() {
         return heightText;
+    }
+
+    public TextField getDailyGoalText() {
+        return dailyGoalText;
     }
 }

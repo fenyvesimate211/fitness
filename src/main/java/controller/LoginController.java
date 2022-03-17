@@ -1,17 +1,10 @@
 package controller;
 
 import application.FitnessApplication;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 
 import java.io.IOException;
 
@@ -37,7 +30,7 @@ public class LoginController {
     private void checkLogin() throws IOException {
         if (username.getText().equals("admin") && password.getText().equals("admin")) {
             wrongLogin.setText("Success");
-            m.changeScene("/fxml/food.fxml");
+            m.changeScene("/fxml/product.fxml");
         } else if (username.getText().isEmpty() && password.getText().isEmpty()){
             wrongLogin.setText("Please enter your data");
         } else {

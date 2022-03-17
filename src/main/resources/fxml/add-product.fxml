@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddProductController">
+    <center>
+        <AnchorPane prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+            <HBox spacing="20.0" GridPane.rowIndex="1" alignment="BASELINE_RIGHT">
+                <padding>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </padding>
+                <Button onAction="#backButtonClick" text="Back" />
+            </HBox>
+        </AnchorPane>
+    </center>
+</BorderPane>

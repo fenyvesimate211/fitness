@@ -7,7 +7,7 @@ import javafx.scene.layout.GridPane;
 
 import java.io.IOException;
 
-public class FoodController {
+public class ProductController {
 
     FitnessApplication m = new FitnessApplication();
 
@@ -15,8 +15,8 @@ public class FoodController {
     public GridPane table_view_food;
     
     @FXML
-    public void addButtonClick(ActionEvent actionEvent) {
-        //TODO
+    public void addButtonClick() throws IOException {
+        m.changeScene("/fxml/add-product.fxml");
     }
 
     @FXML

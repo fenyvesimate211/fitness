@@ -8,7 +8,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <center>
-       <AnchorPane prefHeight="600.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+       <AnchorPane prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER">
            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="133.0" layoutY="88.0" text="Username">
               <font>
                   <Font name="System Bold" size="20.0" />

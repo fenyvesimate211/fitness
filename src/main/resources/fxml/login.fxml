@@ -4,8 +4,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<!-- https://www.youtube.com/watch?v=HBBtlwGpBek&ab_channel=JavaCodingCommunity-ProgrammingTutorials -->
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <center>
        <AnchorPane prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER">

@@ -7,6 +7,12 @@ import java.io.IOException;
 
 public class AddProductController {
 
+    public AddProductController() {
+
+    }
+
+    @FXML
+
     FitnessApplication m = new FitnessApplication();
 
     @FXML

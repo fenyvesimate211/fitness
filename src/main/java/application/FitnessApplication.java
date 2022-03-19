@@ -10,12 +10,12 @@ import java.util.Objects;
 
 public class FitnessApplication extends Application {
 
-    private static Stage stg;
+    private static Stage stage;
 
     @Override
-    public void start(Stage primaryStage) throws IOException {
+    public void start(Stage primaryStage) {
         try {
-            stg = primaryStage;
+            stage = primaryStage;
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/login.fxml")));
             Scene scene = new Scene(root, 600, 400);
             primaryStage.setTitle("Fitness application");
@@ -29,7 +29,7 @@ public class FitnessApplication extends Application {
 
     public void changeScene(String fxml) throws IOException {
         Parent pane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxml)));
-        stg.getScene().setRoot(pane);
+        stage.getScene().setRoot(pane);
     }
 
     public static void main(String[] args) {

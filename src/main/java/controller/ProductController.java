@@ -9,6 +9,10 @@ import java.io.IOException;
 
 public class ProductController {
 
+    public ProductController() {
+
+    }
+
     FitnessApplication m = new FitnessApplication();
 
     @FXML

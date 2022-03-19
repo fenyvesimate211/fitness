@@ -10,6 +10,10 @@ import java.io.IOException;
 
 public class LoginController {
 
+    public LoginController() {
+
+    }
+
     @FXML
     private TextField username;
     @FXML
@@ -18,10 +22,6 @@ public class LoginController {
     private Label wrongLogin;
 
     FitnessApplication m = new FitnessApplication();
-
-    public LoginController() {
-
-    }
 
     public void userLogin() throws IOException {
         checkLogin();

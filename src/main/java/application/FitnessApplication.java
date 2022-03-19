@@ -1,5 +1,7 @@
 package application;
 
+import database.UserService;
+import database.UserServiceImplementation;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,6 +16,9 @@ public class FitnessApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+
+        UserService userService = new UserServiceImplementation();
+
         try {
             stage = primaryStage;
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/login.fxml")));

@@ -1,92 +1,101 @@
 package database;
 
 public class UserEntity {
-    private String Name;
-    private String Email;
-    private String Password;
-    private String Gender;
-    private String DateOfBirth;
-    private int Weight;
-    private int Height;
-    private int DailyGoal;
+    private int id;
+    private String name;
+    private String email;
+    private String password;
+    private String gender;
+    private String dateOfBirth;
+    private int weight;
+    private int height;
+    private int dailyGoal;
 
     public UserEntity() {
 
     }
 
-    public UserEntity(Integer id, String name, String email, String password, String gender, String dateOfBirth, int weight, int height, int dailyGoal) {
-        Name = name;
-        Email = email;
-        Password = password;
-        Gender = gender;
-        DateOfBirth = dateOfBirth;
-        Weight = weight;
-        Height = height;
-        DailyGoal = dailyGoal;
+    public UserEntity(int id, String name, String email, String password, String gender, String dateOfBirth, int weight, int height, int dailyGoal) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.gender = gender;
+        this.dateOfBirth = dateOfBirth;
+        this.weight = weight;
+        this.height = height;
+        this.dailyGoal = dailyGoal;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.password = password;
     }
 
     public String getGender() {
-        return Gender;
+        return gender;
     }
 
     public void setGender(String gender) {
-        Gender = gender;
+        this.gender = gender;
     }
 
     public String getDateOfBirth() {
-        return DateOfBirth;
+        return dateOfBirth;
     }
 
     public void setDateOfBirth(String dateOfBirth) {
-        DateOfBirth = dateOfBirth;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public int getWeight() {
-        return Weight;
+        return weight;
     }
 
     public void setWeight(int weight) {
-        Weight = weight;
+        this.weight = weight;
     }
 
     public int getHeight() {
-        return Height;
+        return height;
     }
 
     public void setHeight(int height) {
-        Height = height;
+        this.height = height;
     }
 
     public int getDailyGoal() {
-        return DailyGoal;
+        return dailyGoal;
     }
 
     public void setDailyGoal(int dailyGoal) {
-        DailyGoal = dailyGoal;
+        this.dailyGoal = dailyGoal;
     }
-
 }

@@ -3,6 +3,7 @@ module fitness {
     requires javafx.fxml;
     requires lombok;
     requires javax.persistence;
+    requires java.sql;
 
 
     exports controller;

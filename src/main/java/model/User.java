@@ -9,25 +9,17 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
+    private Integer id;
     private String Name;
-
     private String Email;
-
     private String Password;
-
     private String Gender;
-
     private String DateOfBirth;
-
     private int Weight;
-
     private int Height;
-
     private int DailyGoal;
 
-    public User(long id, String name, String email, String password, String gender, String dateOfBirth, int weight, int height, int dailyGoal) {
+    public User(Integer id, String name, String email, String password, String gender, String dateOfBirth, int weight, int height, int dailyGoal) {
         this.id = id;
         Name = name;
         Email = email;
@@ -47,7 +39,7 @@ public class User {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

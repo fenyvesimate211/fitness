@@ -1,6 +1,8 @@
 module fitness {
     requires javafx.controls;
     requires javafx.fxml;
+    requires lombok;
+    requires javax.persistence;
 
 
     exports controller;

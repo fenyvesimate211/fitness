@@ -1,12 +1,15 @@
 package controller;
 
 import application.FitnessApplication;
+import database.UserService;
+import database.UserServiceImplementation;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import model.User;
 
 import java.io.IOException;
 import java.net.URL;
@@ -21,6 +24,7 @@ public class UserController implements Initializable {
     public UserController() {
 
     }
+    UserService userService = new UserServiceImplementation();
 
     FitnessApplication m = new FitnessApplication();
     @FXML
@@ -61,6 +65,17 @@ public class UserController implements Initializable {
 
     @FXML
     protected void createProfile() {
+        User user = new User(
+                getUserName().getText(),
+                getEmail().getText(),
+                getPassword().getText(),
+                "male",
+                String.valueOf(getDateOfBirth()),
+                Integer.parseInt(getWeightText().getText()),
+                Integer.parseInt(getHeightText().getText()),
+                Integer.parseInt(getDailyGoalText().getText()));
+        userService.save(user);
+
         //TODO check field data
         if(validateProfile()){
             System.out.println("Profile is valid"); //TODO make text_label

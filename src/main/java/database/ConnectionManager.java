@@ -1,7 +1,6 @@
 package database;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,7 +14,7 @@ public class ConnectionManager {
     private ConnectionManager() {
         try {
             Properties properties = new Properties();
-            properties.load(new FileInputStream("/src/main/resources/dbconfig.properties"));
+            properties.load(new FileInputStream("src/main/resources/dbconfig.properties"));
             this.connection = DriverManager.getConnection(properties.getProperty("url"),
                     properties.getProperty("username"), properties.getProperty("password"));
         } catch (IOException | SQLException e) {

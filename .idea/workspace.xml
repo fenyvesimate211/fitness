@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eb07c91-c448-435e-81d1-fa83ae018a32" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/UserServiceImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy-datasource.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.jpb/persistence-units.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/CrudOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/UserDaoImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/UserEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/FitnessApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/FitnessApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/database/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/ConnectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/UserServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/UserServiceImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +53,6 @@
     <setting file="file://$PROJECT_DIR$/src/main/resources/fxml/user.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/dbconfig.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/controller/UserController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/model/User.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -80,6 +88,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last.edited.regexp" value="323.333" />
     <property name="last_opened_file_path" value="D:/Downloads/data-access-layer-java-example-master/data-access-layer-java-example-master" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -103,6 +112,7 @@
       <recent name="D:\OneDrive - Debreceni Egyetem\Dokumentumok\GitHub\fitness\src\main\java\application" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="database" />
       <recent name="model" />
     </key>
   </component>
@@ -181,7 +191,8 @@
       <workItem from="1647626739618" duration="113000" />
       <workItem from="1647626927895" duration="111000" />
       <workItem from="1647636659952" duration="1621000" />
-      <workItem from="1647689891935" duration="3002000" />
+      <workItem from="1647689891935" duration="5375000" />
+      <workItem from="1647708067292" duration="7284000" />
     </task>
     <servers />
   </component>

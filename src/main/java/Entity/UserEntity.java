@@ -1,4 +1,4 @@
-package database;
+package Entity;
 
 public class UserEntity {
     private int id;

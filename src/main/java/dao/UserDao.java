@@ -1,4 +1,7 @@
-package database;
+package dao;
+
+import database.CrudOperations;
+import Entity.UserEntity;
 
 import java.util.List;
 import java.util.function.Predicate;

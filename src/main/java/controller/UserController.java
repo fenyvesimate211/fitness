@@ -1,8 +1,8 @@
 package controller;
 
 import application.FitnessApplication;
-import database.UserService;
-import database.UserServiceImplementation;
+import Service.UserService;
+import Service.UserServiceImplementation;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;

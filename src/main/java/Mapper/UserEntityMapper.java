@@ -1,5 +1,6 @@
-package database;
+package Mapper;
 
+import Entity.UserEntity;
 import model.User;
 
 public class UserEntityMapper implements UserMapper {

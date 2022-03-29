@@ -1,6 +1,6 @@
-package Mapper;
+package mapper;
 
-import Entity.UserEntity;
+import entity.UserEntity;
 import model.User;
 
 public interface UserMapper {

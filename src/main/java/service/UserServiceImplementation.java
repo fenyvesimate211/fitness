@@ -1,8 +1,8 @@
-package Service;
+package service;
 
-import Entity.UserEntity;
-import Mapper.UserEntityMapper;
-import Mapper.UserMapper;
+import entity.UserEntity;
+import mapper.UserEntityMapper;
+import mapper.UserMapper;
 import dao.UserDao;
 import dao.UserDaoImplementation;
 import model.User;

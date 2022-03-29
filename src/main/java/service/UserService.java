@@ -1,6 +1,6 @@
-package Service;
+package service;
 
-import Entity.UserEntity;
+import entity.UserEntity;
 import model.User;
 
 import java.util.List;

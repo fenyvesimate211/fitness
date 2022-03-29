@@ -1,7 +1,7 @@
 package dao;
 
 import database.CrudOperations;
-import Entity.UserEntity;
+import entity.UserEntity;
 
 import java.util.List;
 import java.util.function.Predicate;

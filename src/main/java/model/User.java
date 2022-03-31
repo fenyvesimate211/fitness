@@ -11,7 +11,6 @@ public class User {
     private int dailyGoal;
 
     public User() {
-
     }
 
     public User(String name, String email, String password, String gender, String dateOfBirth, int weight, int height, int dailyGoal) {
@@ -89,11 +88,11 @@ public class User {
         this.dailyGoal = dailyGoal;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", email=" + email +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "User{" +
+//                "name='" + name + '\'' +
+//                ", email=" + email +
+//                '}';
+//    }
 }

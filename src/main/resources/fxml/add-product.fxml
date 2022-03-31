@@ -31,11 +31,11 @@
                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                    </padding>
                    <Button onAction="#addButtonClick" text="Add" />
-                   <Button onAction="#modifyButtonClick" text="Modify" />
-                   <Button onAction="#deleteButtonClick" text="Delete" />
-                   <Button onAction="#backButtonClick" text="Back" />
                </HBox>
          </left>
+         <right>
+                <Button onAction="#backButtonClick" text="Back" BorderPane.alignment="CENTER" />
+         </right>
        </BorderPane>
 
       <Label text="Product name:" GridPane.columnIndex="1" />

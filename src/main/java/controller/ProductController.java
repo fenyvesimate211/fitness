@@ -10,7 +10,6 @@ import java.io.IOException;
 public class ProductController {
 
     public ProductController() {
-
     }
 
     FitnessApplication m = new FitnessApplication();
@@ -31,6 +30,7 @@ public class ProductController {
     @FXML
     public void deleteButtonClick(ActionEvent actionEvent) {
         //TODO
+        //TODO message box for deleting
     }
 
     @FXML

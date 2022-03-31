@@ -36,7 +36,7 @@
 
     <Label text="Daily goal:" GridPane.columnIndex="1" GridPane.rowIndex="8" />
     <TextField fx:id="dailyGoalText" promptText="Write your daily goal" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-    <ChoiceBox fx:id="calorieChoiceBox" prefHeight="25.0" prefWidth="85.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+    <ChoiceBox fx:id="calorie" prefHeight="25.0" prefWidth="85.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
 
     <Button onAction="#createProfile" text="Create profile" GridPane.columnIndex="3" GridPane.rowIndex="9" />
     <Button onAction="#backToLogin" text="Back" GridPane.columnIndex="4" GridPane.rowIndex="9" />

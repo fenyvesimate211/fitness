@@ -23,8 +23,8 @@ public class UserController implements Initializable {
     }
 
     UserService userService = new UserServiceImplementation();
-
     FitnessApplication m = new FitnessApplication();
+
     @FXML
     private TextField userName;
     @FXML
@@ -38,7 +38,7 @@ public class UserController implements Initializable {
     @FXML
     private TextField heightText;
     @FXML
-    private ChoiceBox<String> calorieChoiceBox;
+    private ChoiceBox<String> calorie;
     @FXML
     private TextField dailyGoalText;
     @FXML
@@ -74,7 +74,7 @@ public class UserController implements Initializable {
         genderChoiceBox.getItems().addAll(gender);
         weightChoiceBox.getItems().addAll(weight);
         heightChoiceBox.getItems().addAll(height);
-        calorieChoiceBox.getItems().addAll(dailyGoal);
+        calorie.getItems().addAll(dailyGoal);
     }
 
     @FXML

@@ -24,7 +24,6 @@ public class AddProductController {
     private TextField fiber;
 
     public AddProductController() {
-
     }
 
     FitnessApplication m = new FitnessApplication();
@@ -34,15 +33,9 @@ public class AddProductController {
         m.changeScene("/fxml/product.fxml");
     }
 
-    public void modifyButtonClick() {
-    }
-
     @FXML
     public void addButtonClick() throws IOException {
         m.changeScene("/fxml/product.fxml");
-    }
-
-    public void deleteButtonClick() {
     }
 
     public TextField getProductName() {

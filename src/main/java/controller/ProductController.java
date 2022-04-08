@@ -1,5 +1,5 @@
 package controller;
-
+import javax.swing.JOptionPane;
 import application.FitnessApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,7 +29,13 @@ public class ProductController {
 
     @FXML
     public void deleteButtonClick(ActionEvent actionEvent) {
-        //TODO
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog(null, "Do you really want to delete?", "Delete", dialogButton);
+        if(dialogResult == 0) {
+            System.out.println("Yes, delete");
+        } else {
+            System.out.println("No, don't delete");
+        }
         //TODO message box for deleting
     }
 

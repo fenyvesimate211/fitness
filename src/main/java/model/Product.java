@@ -1,7 +1,7 @@
 package model;
 
 public class Product {
-    private String products;
+    private String product;
     private int energy;
     private int protein;
     private int fat;
@@ -12,8 +12,8 @@ public class Product {
     public Product() {
     }
 
-    public Product(String products, int energy, int protein, int fat, int carbs, int sugar, int fiber) {
-        this.products = products;
+    public Product(String product, int energy, int protein, int fat, int carbs, int sugar, int fiber) {
+        this.product = product;
         this.energy = energy;
         this.protein = protein;
         this.fat = fat;
@@ -22,12 +22,12 @@ public class Product {
         this.fiber = fiber;
     }
 
-    public String getProducts() {
-        return products;
+    public String getProduct() {
+        return product;
     }
 
-    public void setProducts(String products) {
-        this.products = products;
+    public void setProduct(String product) {
+        this.product = product;
     }
 
     public int getEnergy() {

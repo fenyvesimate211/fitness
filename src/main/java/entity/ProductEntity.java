@@ -2,7 +2,7 @@ package entity;
 
 public class ProductEntity {
     private int id;
-    private String products;
+    private String product;
     private int energy;
     private int protein;
     private int fat;
@@ -14,9 +14,9 @@ public class ProductEntity {
 
     }
 
-    public ProductEntity(int id, String products, int energy, int protein, int fat, int carbs, int sugar, int fiber) {
+    public ProductEntity(int id, String product, int energy, int protein, int fat, int carbs, int sugar, int fiber) {
         this.id = id;
-        this.products = products;
+        this.product = product;
         this.energy = energy;
         this.protein = protein;
         this.fat = fat;
@@ -33,12 +33,12 @@ public class ProductEntity {
         this.id = id;
     }
 
-    public String getProducts() {
-        return products;
+    public String getProduct() {
+        return product;
     }
 
-    public void setProducts(String products) {
-        this.products = products;
+    public void setProduct(String product) {
+        this.product = product;
     }
 
     public int getEnergy() {

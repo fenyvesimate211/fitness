@@ -35,12 +35,12 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>17.0.2</version>
+            <version>18</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>17.0.2</version>
+            <version>18</version>
         </dependency>
 
         <dependency>
@@ -69,7 +69,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.6.5.Final</version>
+            <version>5.6.7.Final</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -124,7 +124,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>fenyvesi.fitnesz/application.FitnessApplication</mainClass>
+                            <mainClass>fenyvesi.fitness/application.FitnessApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

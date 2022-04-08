@@ -4,6 +4,7 @@ module fitness {
     requires lombok;
     requires java.persistence;
     requires java.sql;
+    requires java.desktop;
 
 
     exports controller;

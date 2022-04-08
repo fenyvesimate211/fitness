@@ -1,9 +1,12 @@
 package controller;
 import javax.swing.JOptionPane;
+
 import application.FitnessApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.layout.GridPane;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import model.Product;
 
 import java.io.IOException;
 
@@ -15,7 +18,28 @@ public class ProductController {
     FitnessApplication m = new FitnessApplication();
 
     @FXML
-    public GridPane table_view_food;
+    private TableView<Product> table_view_product;
+
+    @FXML
+    private TableColumn<Product, String> column_product;
+
+    @FXML
+    private TableColumn<Product, Double> column_energy;
+
+    @FXML
+    private TableColumn<Product, Double> column_protein;
+
+    @FXML
+    private TableColumn<Product, Double> column_fat;
+
+    @FXML
+    private TableColumn<Product, Double> column_carbs;
+
+    @FXML
+    private TableColumn<Product, Double> column_sugar;
+
+    @FXML
+    private TableColumn<Product, Double> column_fiber;
     
     @FXML
     public void addButtonClick() throws IOException {

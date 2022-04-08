@@ -1,18 +1,43 @@
 package model;
 
+import lombok.Data;
+
+import javax.persistence.*;
+
+@Data
+@Entity
 public class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @Column(nullable = false)
     private String product;
-    private int energy;
-    private int protein;
-    private int fat;
-    private int carbs;
-    private int sugar;
-    private int fiber;
+
+    @Column(nullable = false)
+    private double energy;
+
+    @Column(nullable = false)
+    private double protein;
+
+    @Column(nullable = false)
+    private double fat;
+
+    @Column(nullable = false)
+    private double carbs;
+
+    @Column(nullable = false)
+    private double sugar;
+
+    @Column(nullable = false)
+    private double fiber;
 
     public Product() {
     }
 
-    public Product(String product, int energy, int protein, int fat, int carbs, int sugar, int fiber) {
+    public Product(long id, String product, double energy, double protein, double fat, double carbs, double sugar, double fiber) {
+        this.id = id;
         this.product = product;
         this.energy = energy;
         this.protein = protein;
@@ -20,6 +45,14 @@ public class Product {
         this.carbs = carbs;
         this.sugar = sugar;
         this.fiber = fiber;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getProduct() {
@@ -30,51 +63,51 @@ public class Product {
         this.product = product;
     }
 
-    public int getEnergy() {
+    public double getEnergy() {
         return energy;
     }
 
-    public void setEnergy(int energy) {
+    public void setEnergy(double energy) {
         this.energy = energy;
     }
 
-    public int getProtein() {
+    public double getProtein() {
         return protein;
     }
 
-    public void setProtein(int protein) {
+    public void setProtein(double protein) {
         this.protein = protein;
     }
 
-    public int getFat() {
+    public double getFat() {
         return fat;
     }
 
-    public void setFat(int fat) {
+    public void setFat(double fat) {
         this.fat = fat;
     }
 
-    public int getCarbs() {
+    public double getCarbs() {
         return carbs;
     }
 
-    public void setCarbs(int carbs) {
+    public void setCarbs(double carbs) {
         this.carbs = carbs;
     }
 
-    public int getSugar() {
+    public double getSugar() {
         return sugar;
     }
 
-    public void setSugar(int sugar) {
+    public void setSugar(double sugar) {
         this.sugar = sugar;
     }
 
-    public int getFiber() {
+    public double getFiber() {
         return fiber;
     }
 
-    public void setFiber(int fiber) {
+    public void setFiber(double fiber) {
         this.fiber = fiber;
     }
 }

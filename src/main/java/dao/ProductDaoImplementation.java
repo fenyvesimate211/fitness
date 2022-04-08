@@ -119,11 +119,11 @@ public class ProductDaoImplementation implements ProductDao{
 
     private void saveFields(ProductEntity entity, PreparedStatement preparedStatement) throws SQLException {
         preparedStatement.setString(1, entity.getProduct());
-        preparedStatement.setInt(2, entity.getEnergy());
-        preparedStatement.setInt(3, entity.getProtein());
-        preparedStatement.setInt(4, entity.getFat());
-        preparedStatement.setInt(5, entity.getCarbs());
-        preparedStatement.setInt(6, entity.getSugar());
-        preparedStatement.setInt(7, entity.getFiber());
+        preparedStatement.setDouble(2, entity.getEnergy());
+        preparedStatement.setDouble(3, entity.getProtein());
+        preparedStatement.setDouble(4, entity.getFat());
+        preparedStatement.setDouble(5, entity.getCarbs());
+        preparedStatement.setDouble(6, entity.getSugar());
+        preparedStatement.setDouble(7, entity.getFiber());
     }
 }

@@ -1,20 +1,20 @@
 package entity;
 
 public class ProductEntity {
-    private int id;
+    private long id;
     private String product;
-    private int energy;
-    private int protein;
-    private int fat;
-    private int carbs;
-    private int sugar;
-    private int fiber;
+    private double energy;
+    private double protein;
+    private double fat;
+    private double carbs;
+    private double sugar;
+    private double fiber;
 
     public ProductEntity() {
 
     }
 
-    public ProductEntity(int id, String product, int energy, int protein, int fat, int carbs, int sugar, int fiber) {
+    public ProductEntity(long id, String product, double energy, double protein, double fat, double carbs, double sugar, double fiber) {
         this.id = id;
         this.product = product;
         this.energy = energy;
@@ -25,11 +25,11 @@ public class ProductEntity {
         this.fiber = fiber;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -41,51 +41,51 @@ public class ProductEntity {
         this.product = product;
     }
 
-    public int getEnergy() {
+    public double getEnergy() {
         return energy;
     }
 
-    public void setEnergy(int energy) {
+    public void setEnergy(double energy) {
         this.energy = energy;
     }
 
-    public int getProtein() {
+    public double getProtein() {
         return protein;
     }
 
-    public void setProtein(int protein) {
+    public void setProtein(double protein) {
         this.protein = protein;
     }
 
-    public int getFat() {
+    public double getFat() {
         return fat;
     }
 
-    public void setFat(int fat) {
+    public void setFat(double fat) {
         this.fat = fat;
     }
 
-    public int getCarbs() {
+    public double getCarbs() {
         return carbs;
     }
 
-    public void setCarbs(int carbs) {
+    public void setCarbs(double carbs) {
         this.carbs = carbs;
     }
 
-    public int getSugar() {
+    public double getSugar() {
         return sugar;
     }
 
-    public void setSugar(int sugar) {
+    public void setSugar(double sugar) {
         this.sugar = sugar;
     }
 
-    public int getFiber() {
+    public double getFiber() {
         return fiber;
     }
 
-    public void setFiber(int fiber) {
+    public void setFiber(double fiber) {
         this.fiber = fiber;
     }
 }

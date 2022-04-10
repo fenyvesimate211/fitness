@@ -3,6 +3,9 @@ package controller;
 import application.FitnessApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import model.Product;
+import service.ProductService;
+import service.ProductServiceImplementation;
 
 import java.io.IOException;
 
@@ -26,6 +29,7 @@ public class AddProductController {
     public AddProductController() {
     }
 
+    ProductService productService = new ProductServiceImplementation();
     FitnessApplication m = new FitnessApplication();
 
     @FXML
@@ -35,6 +39,17 @@ public class AddProductController {
 
     @FXML
     public void addButtonClick() throws IOException {
+        Product product = new Product(
+                getProductName().getText(),
+                Float.parseFloat(getEnergy().getText()),
+                Double.parseDouble(getProtein().getText()),
+                Double.parseDouble(getFat().getText()),
+                Double.parseDouble(getCarbs().getText()),
+                Double.parseDouble(getSugar().getText()),
+                Double.parseDouble(getFiber().getText())
+        );
+        System.out.println(product.toString());
+        productService.save(product);
         m.changeScene("/fxml/product.fxml");
     }
 
@@ -45,6 +60,7 @@ public class AddProductController {
     public TextField getEnergy() {
         return energy;
     }
+
 
     public TextField getProtein() {
         return protein;

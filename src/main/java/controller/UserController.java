@@ -229,4 +229,5 @@ public class UserController implements Initializable {
     public Label getDailyGoalCheck() {
         return dailyGoalCheck;
     }
+
 }

@@ -2,11 +2,16 @@ package controller;
 import javax.swing.JOptionPane;
 
 import application.FitnessApplication;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import model.Product;
+import service.ProductService;
+import service.ProductServiceImplementation;
 
 import java.io.IOException;
 
@@ -17,6 +22,9 @@ public class ProductController {
 
     FitnessApplication m = new FitnessApplication();
 
+    ProductService productService = new ProductServiceImplementation();
+    ObservableList<Product> data = FXCollections.observableArrayList(productService.findAll());
+
     @FXML
     private TableView<Product> table_view_product;
 
@@ -24,7 +32,7 @@ public class ProductController {
     private TableColumn<Product, String> column_product;
 
     @FXML
-    private TableColumn<Product, Double> column_energy;
+    private TableColumn<Product, Float> column_energy;
 
     @FXML
     private TableColumn<Product, Double> column_protein;
@@ -40,6 +48,23 @@ public class ProductController {
 
     @FXML
     private TableColumn<Product, Double> column_fiber;
+
+    @FXML
+    void initialize() {
+        final ObservableList<Product> products = FXCollections.observableArrayList(data);
+        table_view_product.setItems(products);
+        initColumn();
+    }
+
+    private void initColumn() {
+        column_product.setCellValueFactory(new PropertyValueFactory<>("product"));
+        column_energy.setCellValueFactory(new PropertyValueFactory<>("energy"));
+        column_protein.setCellValueFactory(new PropertyValueFactory<>("protein"));
+        column_fat.setCellValueFactory(new PropertyValueFactory<>("fat"));
+        column_carbs.setCellValueFactory(new PropertyValueFactory<>("carbs"));
+        column_sugar.setCellValueFactory(new PropertyValueFactory<>("sugar"));
+        column_fiber.setCellValueFactory(new PropertyValueFactory<>("fiber"));
+    }
     
     @FXML
     public void addButtonClick() throws IOException {

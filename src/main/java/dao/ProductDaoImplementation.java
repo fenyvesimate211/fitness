@@ -108,12 +108,12 @@ public class ProductDaoImplementation implements ProductDao{
     private ProductEntity findFields(ResultSet resultSet) throws SQLException {
         int productId = resultSet.getInt(1);
         String product = resultSet.getString(2);
-        int energy = resultSet.getInt(3);
-        int protein = resultSet.getInt(4);
-        int fat = resultSet.getInt(5);
-        int carbs = resultSet.getInt(6);
-        int sugar = resultSet.getInt(7);
-        int fiber = resultSet.getInt(8);
+        double energy = resultSet.getDouble(3);
+        double protein = resultSet.getDouble(4);
+        double fat = resultSet.getDouble(5);
+        double carbs = resultSet.getDouble(6);
+        double sugar = resultSet.getDouble(7);
+        double fiber = resultSet.getDouble(8);
         return new ProductEntity(productId, product, energy, protein, fat, carbs, sugar, fiber);
     }
 

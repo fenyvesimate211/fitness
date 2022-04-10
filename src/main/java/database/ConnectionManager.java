@@ -1,5 +1,8 @@
 package database;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
@@ -10,6 +13,12 @@ import java.util.Properties;
 public class ConnectionManager {
     private static ConnectionManager instance;
     private Connection connection;
+
+//    private static final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("fitness");
+//
+//    public static EntityManager getEntityManager() {
+//        return entityManagerFactory.createEntityManager();
+//    }
 
     private ConnectionManager() {
         try {
@@ -35,6 +44,8 @@ public class ConnectionManager {
     public Connection getConnection() {
         return connection;
     }
+
+
 
     public static ConnectionManager getInstance() {
         try {

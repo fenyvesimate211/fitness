@@ -6,6 +6,8 @@ module fitness {
     requires java.sql;
     requires java.desktop;
 
+    opens model to javafx.fxml;
+    exports model;
 
     exports controller;
     opens controller to javafx.fxml;

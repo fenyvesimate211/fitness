@@ -36,8 +36,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(long id, String product, double energy, double protein, double fat, double carbs, double sugar, double fiber) {
-        this.id = id;
+    public Product(String product, double energy, double protein, double fat, double carbs, double sugar, double fiber) {
         this.product = product;
         this.energy = energy;
         this.protein = protein;
@@ -109,5 +108,19 @@ public class Product {
 
     public void setFiber(double fiber) {
         this.fiber = fiber;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", product='" + product + '\'' +
+                ", energy=" + energy +
+                ", protein=" + protein +
+                ", fat=" + fat +
+                ", carbs=" + carbs +
+                ", sugar=" + sugar +
+                ", fiber=" + fiber +
+                '}';
     }
 }

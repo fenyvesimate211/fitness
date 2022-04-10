@@ -1,13 +1,24 @@
 package model;
 
+
 public class User {
+
+    private long id;
+
     private String name;
+
     private String email;
+
     private String password;
+
     private String gender;
+
     private String dateOfBirth;
+
     private int weight;
+
     private int height;
+
     private int dailyGoal;
 
     public User() {
@@ -22,6 +33,14 @@ public class User {
         this.weight = weight;
         this.height = height;
         this.dailyGoal = dailyGoal;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {

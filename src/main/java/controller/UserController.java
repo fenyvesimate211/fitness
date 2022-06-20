@@ -104,12 +104,12 @@ public class UserController implements Initializable {
         String NAME_PATTERN = "^[a-záéíóöőüűA-ZÁÉÍÓÖŐÚÜŰ ]{3,30}$";
         String EMAIL_PATTERN = "^(.+)@(.+)$";
         String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-záéíóöőüű])(?=.*[A-ZÁÉÍÓÖŐÚÜŰ])(?=.*[!%@#&()–{}:;',?/*~$^+=<>]).{8,20}$";
-        String WEIGHT_HEIGHT_DAILYGOAL_PATTERN = "^[0-9]{1,3}.[0-9]{1,3}$";
+        String NUMBER = "^[0-9]{1}.[0-9]{1,3}$";
 
         Matcher nameMatcher = Pattern.compile(NAME_PATTERN).matcher(getUserName().getText());
         Matcher emailMatcher = Pattern.compile(EMAIL_PATTERN).matcher(getEmail().getText());
         Matcher passwordMatcher = Pattern.compile(PASSWORD_PATTERN).matcher(getPassword().getText());
-        Matcher weight_height_dailyGoalMatcher = Pattern.compile(WEIGHT_HEIGHT_DAILYGOAL_PATTERN).matcher(getWeightText().getText());
+        Matcher weight_height_dailyGoalMatcher = Pattern.compile(NUMBER).matcher(getWeightText().getText());
 
         //TODO logging not to console
         if (nameMatcher.matches() && !Objects.equals(getUserName().getText(), "")) {

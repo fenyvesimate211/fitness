@@ -30,6 +30,21 @@ public class UserDaoImplementation implements UserDao {
     }
 
     @Override
+    public List<UserEntity> findUser(String username, String password){
+        List<UserEntity> userEntityList = new ArrayList<>();
+        final String SQL = "SELECT name, password FROM users WHERE name = ?;";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SQL)) {
+            preparedStatement.setString(2, username);
+            preparedStatement.setString(4, password);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return userEntityList;
+    }
+
+    @Override
     public Optional<UserEntity> findById(Integer id) {
         final String SQL = "SELECT * FROM users WHERE id = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(SQL)) {

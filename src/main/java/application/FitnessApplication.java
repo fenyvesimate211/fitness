@@ -10,16 +10,19 @@ import java.util.Objects;
 
 public class FitnessApplication extends Application {
 
-    private static Stage stage;
+    public static Stage stage;
+
+    public FitnessApplication() {
+    }
 
     @Override
     public void start(Stage primaryStage) {
 
         try {
             stage = primaryStage;
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/login.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/add-product.fxml")));
             Scene scene = new Scene(root, 600, 400);
-            primaryStage.setTitle("Fitness application");
+            primaryStage.setTitle("Add product");
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
             primaryStage.show();

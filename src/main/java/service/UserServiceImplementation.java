@@ -36,6 +36,11 @@ public class UserServiceImplementation implements UserService {
     }
 
     @Override
+    public boolean findUser(String username, String password) {
+        return false;
+    }
+
+    @Override
     public List<User> findAll() {
         List<UserEntity> userEntityList = this.userDao.findAll();
         return userEntityList.stream().map(userMapper::entityToModel).collect(Collectors.toList());

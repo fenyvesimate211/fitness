@@ -78,7 +78,7 @@ public class ProductController {
 
     @FXML
     public void deleteButtonClick(ActionEvent actionEvent) {
-        int dialogButton = JOptionPane.YES_NO_OPTION;
+        int dialogButton = JOptionPane.INFORMATION_MESSAGE;
         int dialogResult = JOptionPane.showConfirmDialog(null, "Do you really want to delete?", "Delete", dialogButton);
         if(dialogResult == 0) {
             System.out.println("Yes, delete");

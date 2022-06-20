@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import service.UserService;
+import service.UserServiceImplementation;
 
 import java.io.IOException;
 
@@ -21,6 +23,7 @@ public class LoginController {
     private Label wrongLogin;
 
     FitnessApplication m = new FitnessApplication();
+    UserService userService = new UserServiceImplementation();
 
     public void userLogin() throws IOException {
         checkLogin();
@@ -32,6 +35,8 @@ public class LoginController {
             m.changeScene("/fxml/product.fxml");
         } else if (username.getText().isEmpty() && password.getText().isEmpty()){
             wrongLogin.setText("Please enter your data");
+        } else if (userService.findUser(username.getText(), password.getText())){
+
         } else {
             wrongLogin.setText("Wrong Username or Password");
         }

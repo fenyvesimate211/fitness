@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BmiController">
+   <children>
+      <Button layoutX="420.0" layoutY="274.0" mnemonicParsing="false" text="Back" />
+      <Label layoutX="159.0" layoutY="109.0" text="Weight:" />
+      <TextField layoutX="226.0" layoutY="105.0" promptText="Enter weight" />
+      <Label layoutX="159.0" layoutY="152.0" text="Height:" />
+      <TextField layoutX="226.0" layoutY="148.0" promptText="Enter height" />
+      <Button layoutX="226.0" layoutY="207.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Calculate" />
+      <Label contentDisplay="CENTER" layoutX="226.0" layoutY="278.0" prefHeight="17.0" prefWidth="149.0" text="Your BMI is 27.77" textAlignment="CENTER" />
+      <ChoiceBox fx:id="weightChoiceBox" layoutX="389.0" layoutY="105.0" prefHeight="25.0" prefWidth="102.0" />
+      <ChoiceBox fx:id="heightChoiceBox" layoutX="389.0" layoutY="148.0" prefHeight="25.0" prefWidth="102.0" />
+   </children>
+</AnchorPane>

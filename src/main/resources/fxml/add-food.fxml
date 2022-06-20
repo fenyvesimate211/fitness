@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddFoodController">
+   <children>
+      <Button layoutX="513.0" layoutY="341.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="51.0" text="Back" />
+      <Button layoutX="458.0" layoutY="245.0" mnemonicParsing="false" text="Products" />
+      <Button layoutX="414.0" layoutY="192.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="51.0" text="Add" />
+      <ChoiceBox fx:id="productName" layoutX="414.0" layoutY="42.0" prefWidth="150.0" />
+      <TextField layoutX="414.0" layoutY="92.0" prefHeight="25.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="productAmount" layoutX="414.0" layoutY="139.0" prefHeight="25.0" prefWidth="150.0" />
+      <Button layoutX="513.0" layoutY="192.0" mnemonicParsing="false" text="Delete" />
+      <TableView fx:id="table_view" layoutX="38.0" layoutY="42.0" prefHeight="324.0" prefWidth="357.0">
+        <columns>
+          <TableColumn fx:id="productname" prefWidth="112.0" text="Name" />
+          <TableColumn fx:id="productamount" prefWidth="118.0" text="Amount" />
+            <TableColumn fx:id="date" prefWidth="121.0" text="Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
